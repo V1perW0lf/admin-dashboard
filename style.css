@@ -9,6 +9,11 @@ body {
     min-height: 100vh;
 }
 
+.small-icons {
+    width: 2rem;
+    height: 2rem;
+}
+
 .sidebar {
     background-color: rgb(0, 120, 201);
     display: grid;
@@ -20,6 +25,13 @@ body {
 .sidebar .logo {
     color: white;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo .logo-img {
+    width: 3rem;
+    height: 3rem;
 }
 
 .sidebar ul {
@@ -27,6 +39,13 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.sidebar ul li {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .header {
@@ -52,19 +71,15 @@ body {
     gap: 1rem;
 }
 
-.header-icons {
-    width: 2rem;
-    height: 2rem;
-}
-
-.header .user-img {
+.user-greeting .user-img {
     width: 4rem;
     height: 4rem;
 }
 
-.header .user .user-img {
+.user-img {
     width: 3rem;
     height: 3rem;
+    border-radius: 100px;
 }
 
 .user-greeting {
@@ -79,7 +94,7 @@ body {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -96,7 +111,36 @@ body {
 
 .main-content {
     display: grid;
-    grid-column: 2 / 3;
+    grid-template-columns: 2.5fr 1fr;
+    background-color: rgb(216, 222, 224);
+}
+
+.cards {
+    display: grid;
+    /* grid-template: auto 1fr 1fr 1fr / 1fr 1fr; */
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.cards h3 {
+    height: 20px;
+    grid-column: 1 / -1;
+    margin: 0;
+    margin-bottom: -1rem;
+
+}
+
+.cards .card {
+    background-color: white;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+}
+
+.cards .card h4 {
+    margin: 0;
 }
 
 p {
